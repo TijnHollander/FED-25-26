@@ -2,30 +2,148 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  --color-text: #111;
+  --color-background: #fff;
+  --color-muted: #666;
+  --color-accent: #37451f; /* donkergroen zoals bovenbalk */
+  --color-border: #ddd;
+  --max-width: 1200px;
+  --transition: all .3s ease;
+  font-family: system-ui, sans-serif;
 }
 
-
-
-
+/****************/
+/* ALGEMEEN */
+/****************/
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
 
 /****************/
-/* JOUW STYLING */
+/* PROMO BAR */
 /****************/
+.promo-bar {
+  background: var(--color-accent);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: .6rem 1rem;
+}
+.promo-bar a {
+  color: #fff;
+  text-decoration: underline;
+}
 
-/* jouw code */
+/****************/
+/* HEADER + NAV */
+/****************/
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-bar {
+  max-width: var(--max-width);
+  height: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.logo {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+}
+.nav-icons button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  margin-left: .8rem;
+  cursor: pointer;
+}
 
+/****************/
+/* HERO SECTION */
+/****************/
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-video,
+.hero img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.6);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  max-width: 90%;
+}
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.hero-btn {
+  display: inline-block;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: .8rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.hero-btn:hover {
+  background: #fff;
+  color: var(--color-text);
+}
+
+/****************/
+/* RESPONSIVE */
+/****************/
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* als t nodig is later uitklappen */
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}

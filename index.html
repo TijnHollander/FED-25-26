@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="nl">
-	
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Howdy FED2526</title>
-
-	<link href="styles/style.css" rel="stylesheet">
-
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="author" content="jouw naam">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sonos homepage</title>
+  <link href="styles/style.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
 <body>
-	<h1>Howdy FED2526</h1>
 
-	<script defer src="scripts/script.js"></script>
+
+<header class="site-header">
+  <!-- promo sonos nav -->
+  <div class="promo-bar">
+    <p>Er gaat geen cadeau boven goed geluid. <a href="#">Shop nu</a></p>
+  </div>
+
+  <!-- Navigatie -->
+
+    <nav class="nav-bar">
+      <a href="#" class="logo">SONOS</a>
+      <ul class="nav-links">
+        <li><a href="#">Shoppen</a></li>
+        <li><a href="#">Soundbars</a></li>
+        <li><a href="#">Leer meer</a></li>
+        <li><a href="#">Ondersteuning</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button aria-label="Account">USER</button>
+        <button aria-label="Zoeken">SPYGLASS</button>
+        <button aria-label="Winkelwagen">CART</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero-sectie -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop>
+      <source src="images/sonos.mp4" type="video/mp4">
+      <!-- ff kleine fallback -->
+      <img src="images/sonoshero.webp" alt="Sfeervolle woonkamer">
+    </video>
+
+    <div class="hero-content">
+      <h1>Met geluid voel je je thuis</h1>
+      <a href="#" class="hero-btn">Shop cadeaus</a>
+    </div>
+  </section>
+
+  <script defer src="scripts/script.js"></script>
 </body>
-	
 </html>
