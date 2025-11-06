@@ -30,7 +30,7 @@ body {
 }
 
 /****************/
-/* PROMO BAR */
+/* HEADER */
 /****************/
 .promo-bar {
   background: var(--color-accent);
@@ -45,7 +45,7 @@ body {
 }
 
 /****************/
-/* HEADER + NAV */
+/*  NAV */
 /****************/
 .site-header {
   background: #fff;
