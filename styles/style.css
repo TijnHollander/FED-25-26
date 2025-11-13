@@ -1,42 +1,59 @@
-/**************/
-/* CSS REMEDY */
-/**************/
+@font-face {
+  font-family: "sonos";
+  src: url("../fonts/SonosGroteskVF_W_Wght.woff2");
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+/* Voeg hier alle kleur variables toe */
+
+/* Colors */
+--main-color: #ffffff; /* Actueel */
+--primary-color: #222222;
+--secondary-color: #555555;
+--tertiary-color: #888888;
+--accent-color: #ff0000;
+--background-color: #3b410b; /* Actueel */
+--text-color: #000000; /* Actueel */
+--warning-color: #ffcc00;
+--error-color: #ff0000;
+/* Font Sizes */
+--font-size-small: 1em;
+--font-size-medium: 1.2em;
+--font-size-large: 1.6em;
+--font-size-xlarge: 21.2em;
+/* White spaces */
+--ws-small: 1px;
+--ws-medium: 1px;
+--ws-large: 1px;
+--ws-xlarge: 1px;
+/* Border radius */
+--border-radius-small: 4px;
+--border-radius-medium: 8px;
+--border-radius-large: 12px;
+--border-radius-xlarge: 16px;
+/* */
+
+}
+
+html, body {
+ font-family: "sonos", sans-serif;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-  --color-text: #111;
-  --color-background: #fff;
-  --color-muted: #666;
-  --color-accent: #37451f; /* donkergroen zoals bovenbalk */
-  --color-border: #ddd;
-  --max-width: 1200px;
-  --transition: all .3s ease;
-  font-family: system-ui, sans-serif;
-}
-
-/****************/
-/* ALGEMEEN */
-/****************/
-body {
-  background: var(--color-background);
-  color: var(--color-text);
-  overflow-x: hidden;
-  line-height: 1.4;
-}
-.muted { color: var(--color-muted); }
-
 /****************/
 /* PROMO-BALK */
 /****************/
 .promo-bar {
-  background: var(--color-accent);
+  background: var(--background-color);
   color: #fff;
   text-align: center;
   font-size: 0.9rem;
@@ -59,7 +76,6 @@ body {
 }
 .nav-bar {
   max-width: var(--max-width);
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
