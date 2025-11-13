@@ -58,6 +58,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
+#### Niet goed Narrator
+  Gelijk zag ik al een foutje zo zag ik op de a links geen aria-label. Dit kan de narrator, niet echt goed plaatsen dan wordt er gewoon gezegd wat er in de tekst staat zoals nu dus: "Shop cadeaus", maar nu weet je hierdoor niet welke cadeaus? Dit is bij alle a link elementen dat er geen aria-label bevind en de narrator gewoon de tekst opleest.
+  <img src="readme-images/readme1.png" width="375px">
+
+  Links in de navbar bevatten ook geen aria-label natuurlijk is dit niet altijd nodig maar echter kan dit wel meer informatie bieden voor iemand die narrator gebruikt
+   <img src="readme-images/readme2.png" width="375px">
+
+   Er staan ook meerdere H1's op de pagina dit werkt echt verwarrend met Hotkeys voor de narrator.
+<img src="readme-images/readme3.png" width="375px">
+<img src="readme-images/readme4.png" width="375px">
+
+#### Wel goed Narrator
+De links die een aria-label bevatten waren kort en informatief hierdoor begrijp je meteen waar je naartoe geleid wordt.
+
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
