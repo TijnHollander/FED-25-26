@@ -47,7 +47,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenshot(s) van de tweede pagina (small screen):
   Sonos - How sonos works
   https://www.sonos.com/nl-nl/how-sonos-works
-  <img src="readme-images/howSonosWorks.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/sonosHowitWorks.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -89,10 +89,26 @@ hierdoor mist de gebruiker met een screenreader belangrijke context over wat erm
 
 
 #### Wel goed Narrator
-De links die een aria-label bevatten waren kort en informatief hierdoor begrijp je meteen waar je naartoe geleid wordt.
+De links die wel een `aria-label` bevatten, waren vrij kort en informatief, waardoor je meteen begrijpt waar je naartoe gaat  
+De TAB op de site werkt over het algemeen goed je kunt logisch van boven naar beneden door de focus elementen navigeren. 
 
-  ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+### Bevindingen
+Lijst met bevindingen die in de test naar voren kwamen:
+
+- Website gebruikt **lastige taal**.
+<img src="readme-images/readme5.png" width="375px">
+
+- **HTML-validatie** op W3C Validation Checker levert veel ERRORS op.  
+- **Meerdere `<h1>`-elementen** op EEN pagina.  
+- Niet alle **afbeeldingen hebben een `alt` attribvute**.  
+- Afbeeldingen die **tekst bevatten** hebben geen alt-tekst met de inhoud die op de afbeelding staat.  
+- De **video autoplayt** direct bij het laden van de pagina.  
+- Ze gebruiken `<a>` voor **buttons i.p.v. `<button>` elementen**.  
+- **Links** openen niet in een nieuwe tab, wat voor sommige gebruikers verwarrend kan zijn.  
+- Veel links missen een **`aria-label`**, waardoor context ontbreekt voor screen readers.  
+- Icons (zoals winkelmandje en search) hebben **geen alt of tekst**.  
+- **tab** en **focus** werken goed.  
+- Waar `aria-labels` wel gebruikt zijn, zijn ze **kort en duidelijk**, echter is er wel veel verbetering nodig bij de rest...
 
 </details>
 
