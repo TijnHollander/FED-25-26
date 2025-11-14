@@ -47,7 +47,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenshot(s) van de tweede pagina (small screen):
   Sonos - How sonos works
   https://www.sonos.com/nl-nl/how-sonos-works
-  <img src="readme-images/howSonosWorks.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/sonosHowitWorks.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -59,21 +59,56 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
 #### Niet goed Narrator
-  Gelijk zag ik al een foutje zo zag ik op de a links geen aria-label. Dit kan de narrator, niet echt goed plaatsen dan wordt er gewoon gezegd wat er in de tekst staat zoals nu dus: "Shop cadeaus", maar nu weet je hierdoor niet welke cadeaus? Dit is bij alle a link elementen dat er geen aria-label bevind en de narrator gewoon de tekst opleest.
-  <img src="readme-images/readme1.png" width="375px">
+Gelijk zag ik al een foutje namelijk op veel `<a>` links ontbreekt een `aria-label`.  
+dit zorgt ervoor dat de narrator alleen de zichtbare linkstekst opleest, wat nu dus: **"Shop cadeaus"** is.  
+De gebruiker weet dan niet wat voor cadeaus bedoeld worden of waar de link precies naartoe leidt.  
+Dit komt bij bijna alle `<a>` elementen voor sommige zijn natuurlijk wel vanzelfsprekend.
 
-  Links in de navbar bevatten ook geen aria-label natuurlijk is dit niet altijd nodig maar echter kan dit wel meer informatie bieden voor iemand die narrator gebruikt
-   <img src="readme-images/readme2.png" width="375px">
+<img src="readme-images/readme1.png" width="375px">
 
-   Er staan ook meerdere H1's op de pagina dit werkt echt verwarrend met Hotkeys voor de narrator.
+Links in de navbar bevatten ook geen extra context of aria-labels.  
+Dit kan ervoor zorgen dat narrators minder kan helpen  duidelijk te maken dat het bijvoorbeeld om onderdelen van de website gaat, zoals *Producten*, *Support* of *Account*.
+
+<img src="readme-images/readme2.png" width="375px">
+
+Op de pagina staan **meerdere `<h1>` koppen**, wat verwarrend kan zijn voor de gebruikers die met sneltoetsen door de koppen navigeren 
+Een normale structuur van koppen is (`h1` EENMAAL, `h2`, `h3`). 
+
 <img src="readme-images/readme3.png" width="375px">
 <img src="readme-images/readme4.png" width="375px">
 
-#### Wel goed Narrator
-De links die een aria-label bevatten waren kort en informatief hierdoor begrijp je meteen waar je naartoe geleid wordt.
+Verder worden sommige  **`buttons`**, met iconen (zoals het winkelmandje en het zoekicoontje) niet duidelijk beschreven worden, of ik dat echt gewoon niet kan vinden...  
+Narrator leest b.v.d alleen **`button`** voor zonder verdere uitleg.  
+Een korte aria-label zoals `aria-label="zoeken"` of `aria-label="winkelwagentje"` zou dit al meteen duidelijker maken
 
-  ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+Sommige sections bevatten grote afbeeldingen en videos zonder alternatieve tekst (`alt`).  
+hierdoor mist de gebruiker met een screenreader belangrijke context over wat ermee wordt bedoeld.
+
+
+
+
+
+#### Wel goed Narrator
+De links die wel een `aria-label` bevatten, waren vrij kort en informatief, waardoor je meteen begrijpt waar je naartoe gaat  
+De TAB op de site werkt over het algemeen goed je kunt logisch van boven naar beneden door de focus elementen navigeren. 
+
+### Bevindingen
+Lijst met bevindingen die in de test naar voren kwamen:
+
+- Website gebruikt **lastige taal**.
+<img src="readme-images/readme5.png" width="375px">
+
+- **HTML-validatie** op W3C Validation Checker levert veel ERRORS op.  
+- **Meerdere `<h1>`-elementen** op EEN pagina.  
+- Niet alle **afbeeldingen hebben een `alt` attribvute**.  
+- Afbeeldingen die **tekst bevatten** hebben geen alt-tekst met de inhoud die op de afbeelding staat.  
+- De **video autoplayt** direct bij het laden van de pagina.  
+- Ze gebruiken `<a>` voor **buttons i.p.v. `<button>` elementen**.  
+- **Links** openen niet in een nieuwe tab, wat voor sommige gebruikers verwarrend kan zijn.  
+- Veel links missen een **`aria-label`**, waardoor context ontbreekt voor screen readers.  
+- Icons (zoals winkelmandje en search) hebben **geen alt of tekst**.  
+- **tab** en **focus** werken goed.  
+- Waar `aria-labels` wel gebruikt zijn, zijn ze **kort en duidelijk**, echter is er wel veel verbetering nodig bij de rest...
 
 </details>
 
