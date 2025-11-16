@@ -220,7 +220,7 @@ article {
 
 
 /* First article */
-
+/* Nesting zodat het ff wat mooier is */
 main article:first-child {
   position: relative;
   width: var(--max-width);
@@ -232,50 +232,31 @@ main article:first-child {
   align-items: center;
   flex-direction: column;
   text-align: center;
+& > h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
 }
-
-/* background */
-main article:first-child img {
+& > p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    max-width: 600px;
+}
+& > img {
   position: absolute;
   width: var(--max-width);
   height: 100%;
   object-fit: cover;
   z-index: 1;
 }
-
-/* doinkere overlay */
-main article:first-child::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--hero-overlay);
-  z-index: 2;
-}
-
-/* nesting dit geeft me echt hoofdpijn */
-main article:first-child>h2,
-main article:first-child>p,
-main article:first-child>a {
-  position: relative;
-  z-index: 3;
-  color: var(--main-color);
-  margin: 0.5em 0;
-}
-
-/* h2 styling */
-main article:first-child>h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 600;
-}
-
-/* para styling */
-main article:first-child>p {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  max-width: 600px;
-}
-
-/* btn styling */
-main article:first-child>a {
+/* overlay */
+&::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--hero-overlay);
+    z-index: 2;
+  }
+  /* btn styling en hovertje*/
+  &>a {
   display: inline-block;
   padding: var(--primary-button-padding);
   border-radius: var(--primary-button-radius);
@@ -284,12 +265,27 @@ main article:first-child>a {
   text-decoration: none;
   font-size: var(--primary-button-font-size);
   transition: 0.2s ease;
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(3px);
+  }
+}
 }
 
-main article:first-child>a:hover {
+
+/* dit geeft me echt hoofdpijn */
+main article:first-child>h2,
+main article:first-child>p,
+main article:first-child>a {
+  position: relative;
+  z-index: 3;
+  color: var(--main-color);
+  margin: 0.5em 0;
+}
+/* main article:first-child>a:hover {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(3px);
-}
+} */
 
 
 
