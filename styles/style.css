@@ -273,6 +273,7 @@ main article:first-child {
 }
 
 
+
 /* dit geeft me echt hoofdpijn */
 main article:first-child>h2,
 main article:first-child>p,
@@ -281,6 +282,12 @@ main article:first-child>a {
   z-index: 3;
   color: var(--main-color);
   margin: 0.5em 0;
+}
+
+@media screen and (min-width: 54em) {
+  main article:first-child {
+    grid-column: 1 / -1; /* full row */
+  }
 }
 /* main article:first-child>a:hover {
   background: rgba(255, 255, 255, 0.12);
