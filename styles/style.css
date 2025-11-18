@@ -28,9 +28,9 @@
   /* Font Sizes */
   --font-size-small: 1em;
   --font-size-medium: 1.2em;
-  --font-size-large: 1.6em;
-  --font-size-xlarge: 2.2em;
-  --font-size-xxlarge: 6em; /* miss ff met clamp werken */
+  --font-size-large: clamp(1rem, 10vw, 1.6rem);
+  --font-size-xlarge: clamp(1rem, 10vw, 4rem);
+  --font-size-xxlarge: clamp(1rem, 10vw, 6rem); /* CLAMPPPP */
   /* White spaces */
   --ws-small: 1px;
   --ws-medium: 1px;
@@ -256,6 +256,11 @@ main article:first-child {
   object-fit: cover;
   z-index: 1;
 }
+& > h3 {
+    font-size: var(--font-size-xlarge);
+  font-weight: 400;
+  color: var(--text-color);
+}
 /* overlay */
 &::after {
     content: "";
@@ -292,6 +297,18 @@ main article:first-child>a {
   color: var(--main-color);
   margin: 0.5em 0;
 }
+
+/* alle h3's in main in article krijgen */
+main article section {
+  & h3 {
+  font-size: var(--font-size-xlarge);
+  font-weight: 400;
+  color: var(--text-color);
+  }
+ & > p {
+    font-size: var(--font-size-large);
+}}
+
 
 @media screen and (min-width: 54em) {
   main article:first-child {
