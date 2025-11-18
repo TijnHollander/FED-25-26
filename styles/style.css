@@ -29,7 +29,8 @@
   --font-size-small: 1em;
   --font-size-medium: 1.2em;
   --font-size-large: 1.6em;
-  --font-size-xlarge: 21.2em;
+  --font-size-xlarge: 2.2em;
+  --font-size-xxlarge: 6em; /* miss ff met clamp werken */
   /* White spaces */
   --ws-small: 1px;
   --ws-medium: 1px;
@@ -307,6 +308,26 @@ main article:first-child>a {
 /* Article 2 */
 main article:nth-of-type(2)  {
   grid-column: 1 / -1;
-  background-color: red;
   text-align: center;
+& h2 {
+    color: var(--text-color);
+    font-size: var(--font-size-xxlarge);
+    font-weight: 400;
+}
+}
+
+/* */
+main article:nth-of-type(3)  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main article:nth-of-type(4)  {
+
+& img {
+ width: var(--max-width);
+ height: auto;
+ object-fit: cover;
+}
 }
