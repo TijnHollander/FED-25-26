@@ -27,7 +27,7 @@
   --error-color: #ff0000;
   /* Font Sizes */
   --font-size-small: 1em;
-  --font-size-medium: 1.2em;
+  --font-size-medium: clamp(1rem, 10vw, 1.4rem);
   --font-size-large: clamp(1rem, 10vw, 1.6rem);
   --font-size-xlarge: clamp(1rem, 10vw, 4rem);
   --font-size-xxlarge: clamp(1rem, 10vw, 6rem); /* CLAMPPPP */
@@ -208,7 +208,7 @@ main {
 
 }
 
-@media screen and (54em > width) {
+@media screen and (66em > width) {
   main {
     /*     grid-template-columns: repeat( 1, minmax(1fr, 1fr) ); */
     grid-template-columns: repeat(1, 1fr);
@@ -216,7 +216,7 @@ main {
   }
 }
 
-@media screen and (84em > width) {
+@media screen and (50em > width) {
   main {
     /*     grid-template-columns: repeat( 1, minmax(1fr, 1fr) ); */
      max-width: 95vw; 
@@ -311,7 +311,9 @@ main article section {
   color: var(--text-color);
   }
  & > p {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    color: var(--secondary-color);
 }}
 
 
@@ -343,13 +345,75 @@ main article:nth-of-type(3)  {
   display: flex;
   align-items: center;
   justify-content: center;
+  & blockquote {
+    margin-top: 1.5em;
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    color: var(--text-color);
+    border: 1px solid var(--tertiary-color);
+    border-radius: var(--border-radius-medium);
+    padding: 1.2em;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  & strong {
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
 }
+
 
 main article:nth-of-type(4)  {
 
 & img {
- width: var(--max-width);
- height: auto;
- object-fit: cover;
+  max-width: var(--max-width);
+ object-fit: contain;
+} 
 }
+
+main article:nth-of-type(5)  {
+
+& img {
+  max-width: var(--max-width);
+ object-fit: contain;
+} & blockquote {
+
+}}
+
+main article:nth-of-type(6)  {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  & blockquote {
+    margin-top: 1.5em;
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    color: var(--text-color);
+    border: 1px solid var(--tertiary-color);
+    border-radius: var(--border-radius-medium);
+    padding: 1.2em;
+    width: fit-content;
+  }
+  & quote {
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+  }}
+
+
+  main article:nth-of-type(7)  {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+main article:nth-of-type(8)  {
+
+}
+
+.sonos-animation {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-medium);
 }
