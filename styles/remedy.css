@@ -1,0 +1,13 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* https://stackoverflow.com/questions/46583373/hover-effect-if-button-is-not-disabled  */
+button:hover:not([disabled]) {
+    /* background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(3px); */
+}

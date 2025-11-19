@@ -1,100 +1,6 @@
-@font-face {
-  font-family: "sonos";
-  src: url("../fonts/sonos.woff2");
-}
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-:root {
-  /* Voeg hier alle kleur variables toe */
-
-  /* General */
-  --max-width: 100%; 
-  /* Colors */
-  --main-color: #ffffff;
-  /* Actueel */
-  --primary-color: #222222;
-  --secondary-color: #555555;
-  --tertiary-color: #888888;
-  --accent-color: #ff0000;
-  --background-color: #3b410b;
-  /* Actueel */
-  --text-color: #000000;
-  /* Actueel */
-  --warning-color: #ffcc00;
-  --error-color: #ff0000;
-  /* Font Sizes */
-  --font-size-small: 1em;
-  --font-size-medium: clamp(1rem, 10vw, 1.4rem);
-  --font-size-large: clamp(1rem, 10vw, 1.6rem);
-  --font-size-xlarge: clamp(1rem, 10vw, 4rem);
-  --font-size-xxlarge: clamp(1rem, 10vw, 6rem); /* CLAMPPPP */
-  /* White spaces */
-  --ws-small: 1px;
-  --ws-medium: 1px;
-  --ws-large: 1px;
-  --ws-xlarge: 1px;
-  /* Border radius */
-  --border-radius-small: 4px;
-  --border-radius-medium: 8px;
-  --border-radius-large: 12px;
-  --border-radius-xlarge: 16px;
-  --border-radius-xxlarge: 50px;
-  /* Padding */
-  --padding-small: 4px;
-  --padding-medium: 8px;
-  --padding-large: 12px;
-  --padding-xlarge: 16px;
-  --padding-xxlarge: 1rem;
-  /* Gap */
-  --gap-small: 0.6em;
-  --gap-medium: 1em;
-  --gap-large: 1.8em;
-  --gap-xlarge: 2.4em;
-  /* Cards */
-  --card-color: #333;
-  --card-background: #fff;
-  /* Hero Section */
-  --hero-overlay: rgba(0, 0, 0, 0.35);
-
-  --hero-title-size: clamp(2.4rem, 5vw, 4.8rem);
-
-  /* Primary Button */
-  --primary-button-radius: 40px;
-  --primary-button-padding: 0.9em 2.2em;
-  --primary-button-font-size: 1.1rem;
 
 
-  /* onder de hero */
-  --feature-height: 65vh;
-  --feature-overlay: rgba(0, 0, 0, 0.45);
 
-  --feature-title-size: clamp(2.2rem, 4vw, 3.4rem);
-  --feature-text-size: clamp(1rem, 2vw, 1.3rem);
-
-  --feature-text-color: #ffffff;
-}
-
-html,
-body {
-  font-family: "sonos", sans-serif;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* https://stackoverflow.com/questions/46583373/hover-effect-if-button-is-not-disabled  */
-button:hover:not([disabled]) {
-    /* background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(3px); */
-}
 
 /****************/
 /* HEADER + NAV */
@@ -200,11 +106,12 @@ button:hover:not([disabled]) {
 /********************/
 main {
   display: grid;
-  gap: 1em;
+  gap: 2em;
   grid-template-columns: repeat(2, 1fr);
-  padding: var(--padding-xxlarge);
- max-width: 62vw; 
+  padding: var(--grid-gutter);
+  max-width: var(--grid-max-width);
   margin: 0 auto;
+  margin-top: 2em;
 
 }
 
@@ -212,17 +119,8 @@ main {
   main {
     /*     grid-template-columns: repeat( 1, minmax(1fr, 1fr) ); */
     grid-template-columns: repeat(1, 1fr);
-     max-width: 90vw; 
   }
 }
-
-@media screen and (50em > width) {
-  main {
-    /*     grid-template-columns: repeat( 1, minmax(1fr, 1fr) ); */
-     max-width: 95vw; 
-  }
-}
-
 
 /* Articles */
 article {
@@ -311,7 +209,7 @@ main article section {
   color: var(--text-color);
   }
  & > p {
-    font-size: var(--font-size-medium);
+    font-size: 1.2rem;
     font-weight: 400;
     color: var(--secondary-color);
 }}
@@ -377,11 +275,13 @@ main article:nth-of-type(5)  {
 & img {
   max-width: var(--max-width);
  object-fit: contain;
+
 } & blockquote {
 
 }}
 
 main article:nth-of-type(6)  {
+
     display: flex;
   align-items: center;
   justify-content: center;
