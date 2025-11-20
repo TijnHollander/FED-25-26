@@ -1,42 +1,214 @@
-
-
-
-
-/****************/
-/* HEADER + NAV */
-/****************/
+/**********************/
+/* HEADER + PROMO BAR */
+/**********************/
 
 /* Promo bar */
-
-
-/* Navbar */
-/************************/
-/* PROMO BAR (bovenste) */
-/************************/
-header ul:nth-of-type(1) {
+header ul:first-child {
   background-color: var(--promo-bar-background);
   color: var(--main-color);
   display: flex;
   height: 5vh;
   align-items: center;
-  text-decoration: none;
   justify-content: space-around;
- & li {
-    flex: space-between ;
-    list-style-type: none;
-    text-align: center;
-    text-decoration: none;
- } &a {
-    color: var(--main-color);
-    text-decoration: none;
-    text-underline-position: below;
- }} 
+  text-decoration: none;
+}
 
 
-/********************/
-/* MAIN NAV (wit)   */
-/********************/
+header ul:nth-of-type(1) li {
+  list-style-type: none;
+  text-align: center;
+}
 
+header ul:nth-of-type(1) a {
+  color: var(--main-color);
+  text-decoration: none;
+  text-underline-position: below;
+}
+
+/**********************/
+/* MAIN NAV (structure based) */
+/**********************/
+
+header > nav {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  max-width: var(--grid-max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  height: 10vh;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 2rem;
+
+  position: relative;
+}
+
+/* Logo */
+header > nav > a:first-of-type {
+  font-size: 1.4rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+header > nav > ul:nth-of-type(1) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Links in menu */
+header > nav > ul:nth-of-type(1) li a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* Black Friday highlight */
+header > nav > ul:nth-of-type(1) li:first-of-type a {
+  color: #5b672a;
+  font-weight: 500;
+}
+
+/* Icons  */
+header > nav > div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+header > nav > div:nth-of-type(1) > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0;
+}
+
+/* Hamburger  */
+header > nav > button:last-of-type {
+  justify-self: end;
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Lines boerger */
+header > nav > button:last-of-type span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Nav open == true > animation transform */
+header > nav[data-open="true"] > button:last-of-type span:first-of-type {
+  transform: translateY(3px) rotate(45deg);
+}
+
+header > nav[data-open="true"] > button:last-of-type span:last-of-type {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/**************/
+/* MOBIEL     */
+/**************/
+@media screen and (max-width: 54em) {
+  header > nav {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* dropdown menu */
+  header > nav > ul:nth-of-type(1) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1.5rem 1rem;
+  }
+
+  header > nav[data-open="true"] > ul:nth-of-type(1) {
+    display: flex;
+  }
+}
+
+/**************/
+/* DESKTOP    */
+/**************/
+@media screen and (min-width: 54em) {
+  header > nav > ul:nth-of-type(1) {
+    display: flex;
+  }
+
+  /* hamburger = weg */
+  header > nav > button:last-of-type {
+    display: none;
+  }
+
+  header > nav > ul:nth-of-type(1) {
+    justify-self: center;
+  }
+
+  header > nav > div:nth-of-type(1) {
+    justify-self: end;
+    gap: 1.5rem;
+  }
+
+  /* hover lijntje */
+  header > nav > ul:nth-of-type(1) li a {
+    position: relative;
+  }
+
+  header > nav > ul:nth-of-type(1) li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width 0.2s ease;
+  }
+
+  header > nav > ul:nth-of-type(1) li a:hover::after {
+    width: 100%;
+  }
+}
+
+
+
+/**************/
+/* HERO       */
+/**************/
 .hero {
   position: relative;
   height: 100vh;
@@ -45,26 +217,8 @@ header ul:nth-of-type(1) {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  ;
 }
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
-/* convert dit ff later naar goeie variables dit is spaghetti code... */
+
 /* Background video */
 .hero-vid {
   position: absolute;
@@ -74,7 +228,7 @@ header ul:nth-of-type(1) {
   object-fit: cover;
 }
 
-/* overlaytje */
+/* Overlay */
 .hero::after {
   content: "";
   position: absolute;
@@ -82,7 +236,7 @@ header ul:nth-of-type(1) {
   background: var(--hero-overlay);
 }
 
-/* centered content */
+/* Hero content */
 .hero-content {
   position: relative;
   text-align: center;
@@ -98,7 +252,7 @@ header ul:nth-of-type(1) {
   margin-bottom: 1.2rem;
 }
 
-/* btn in hero */
+/* Hero button */
 .hero-btn {
   cursor: pointer;
   display: inline-block;
@@ -112,48 +266,44 @@ header ul:nth-of-type(1) {
 }
 
 .hero-btn:hover {
-
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(3px);
 }
 
-
-
 /********************/
-/* MAIN             */
+/* MAIN GRID LAYOUT */
 /********************/
 main {
   display: grid;
   gap: 2em;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   padding: var(--grid-gutter);
   max-width: var(--grid-max-width);
   margin: 0 auto;
-  margin-top: 2em;
-
 }
 
 @media screen and (66em > width) {
   main {
-    /*     grid-template-columns: repeat( 1, minmax(1fr, 1fr) ); */
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
-/* Articles */
+/****************/
+/* ARTICLE template */
+/****************/
 article {
   background-color: var(--card-background);
   color: var(--card-color);
   padding: 1em;
-  
 }
 
-
-/* First article */
-/* Nesting zodat het ff wat mooier is */
+/***************************/
+/* EERSTE GROTE WIJD ARTIKEL */
+/***************************/
 main article:first-child {
+  grid-column: 1 / -1;
   position: relative;
-  width: var(--max-width);
+  width: 100%;
   height: 56vh;
   border-radius: var(--border-radius-xxlarge);
   overflow: hidden;
@@ -162,193 +312,147 @@ main article:first-child {
   align-items: center;
   flex-direction: column;
   text-align: center;
-& > h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 400;
 }
-& > p {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    max-width: 600px;
-}
-& > img {
+
+main article:first-child img {
   position: absolute;
-  width: var(--max-width);
+  width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 1;
 }
-& > h3 {
-    font-size: var(--font-size-xlarge);
-  font-weight: 400;
-  color: var(--text-color);
-}
-/* overlay */
-&::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--hero-overlay);
-    z-index: 2;
-  }
-  /* btn styling en hovertje*/
-  &>a {
-  display: inline-block;
-  padding: var(--primary-button-padding);
-  border-radius: var(--primary-button-radius);
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
-  text-decoration: none;
-  font-size: var(--primary-button-font-size);
-  transition: 0.2s ease;
-  &:hover {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(3px);
-  }
-}
+
+main article:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+  z-index: 2;
 }
 
-
-
-/* dit geeft me echt hoofdpijn */
-main article:first-child>h2,
-main article:first-child>p,
-main article:first-child>a {
+main article:first-child > * {
   position: relative;
   z-index: 3;
   color: var(--main-color);
   margin: 0.5em 0;
 }
 
-/* alle h3's in main in article krijgen */
-main article section {
-  & h3 {
+main article:first-child h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+}
+
+main article:first-child p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  max-width: 600px;
+}
+
+main article:first-child a {
+  display: inline-block;
+  padding: var(--primary-button-padding);
+  border-radius: var(--primary-button-radius);
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  font-size: var(--primary-button-font-size);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+main article:first-child a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/************************/
+/* ARTICLE TYPO ARTICLE 2 */
+/************************/
+main article:nth-of-type(2) {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+main article:nth-of-type(2) h2 {
+  color: var(--text-color);
+  font-size: var(--font-size-xxlarge);
+  font-weight: 400;
+}
+
+main article section h3 {
   font-size: var(--font-size-xlarge);
   font-weight: 400;
   color: var(--text-color);
-  }
- & > p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--secondary-color);
-}}
+}
 
+main article section > p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
 
+/********************************************/
+/* SECTIONS NAAST ELKAAR OP GROOT SCHERM    */
+/********************************************/
 @media screen and (min-width: 54em) {
-  main article:first-child {
-    grid-column: 1 / -1; /* full row */
-  }
-}
-/* main article:first-child>a:hover {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(3px);
-} */
-
-
-
-/* Article 2 */
-main article:nth-of-type(2)  {
-  grid-column: 1 / -1;
-  text-align: center;
-& h2 {
-    color: var(--text-color);
-    font-size: var(--font-size-xxlarge);
-    font-weight: 400;
-}
-}
-
-/* */
-main article:nth-of-type(3)  {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  & blockquote {
-    margin-top: 1.5em;
-    font-size: var(--font-size-small);
-    font-weight: 400;
-    color: var(--text-color);
-    border: 1px solid var(--tertiary-color);
-    border-radius: var(--border-radius-medium);
-    padding: 1.2em;
-    width: fit-content;
-    display: flex;
+  /* ff simpel */
+  main article:nth-of-type(3),
+  main article:nth-of-type(4),
+  main article:nth-of-type(5),
+  main article:nth-of-type(6),
+  main article:nth-of-type(7)
+  /* Hier dingetjes toevoegen extra articles enzv*/ {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
     align-items: center;
   }
-  & strong {
-    font-size: 2.2rem;
-    font-weight: 400;
-  }
-}
 
-
-main article:nth-of-type(4)  {
-
-& img {
-  max-width: var(--max-width);
- object-fit: contain;
-} 
-}
-
-main article:nth-of-type(5)  {
-
-& img {
-  max-width: var(--max-width);
- object-fit: contain;
-
-} & blockquote {
-
-}}
-
-main article:nth-of-type(6)  {
-
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  & blockquote {
-    margin-top: 1.5em;
-    font-size: var(--font-size-small);
-    font-weight: 400;
-    color: var(--text-color);
-    border: 1px solid var(--tertiary-color);
-    border-radius: var(--border-radius-medium);
-    padding: 1.2em;
-    width: fit-content;
-  }
-  & quote {
-    font-size: var(--font-size-medium);
-    font-weight: 400;
+  main article:nth-of-type(6) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    & section:first-child {
+    width: 30vw;
+    position: relative;
+    }
+  & img {
+    
   }}
 
-
-  main article:nth-of-type(7)  {
-    display: flex;
-  align-items: center;
-  justify-content: center;
-
+  /* Drie kolommen laatste article */
+  main article:nth-of-type(7) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: flex-start;
+  }
 }
 
+/******************/
+/* QUOTEeeeeeees  */
+/******************/
+main article:nth-of-type(3) blockquote,
+main article:nth-of-type(4) blockquote {
+  margin-top: 1.5em;
+  font-size: var(--font-size-small);
+  color: var(--text-color);
+  border: 1px solid var(--tertiary-color);
+  border-radius: var(--border-radius-medium);
+  padding: 1.2em;
+  width: fit-content;
+}
+
+main article:nth-of-type(3) strong {
+  font-size: 2.2rem;
+}
+
+main article img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/*****************/
+/* SONOS ANIMATIE */
+/*****************/
 .sonos-animation {
   width: 100%;
   height: auto;
   border-radius: var(--border-radius-medium);
-}
-
-
-main article:nth-of-type(8)  {
-  grid-column: 1 / -1;
-  gap: var(--grid-gutter);
-  justify-content: space-between;
-  display: flex;
-} & img {
-  max-width: var(--max-width);
-  object-fit: contain;
-} & section {
-
-
-}
-
-@media screen and (66em > width) {
-  main article:nth-of-type(8) {
-    /*     grid-template-columns: repeat( 1, minmax(1fr, 1fr) ); */
-    flex-wrap: wrap;
-  }
 }
