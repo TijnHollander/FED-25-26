@@ -8,8 +8,8 @@
   <link href="styles/style.css" rel="stylesheet">
   <link href="styles/root.css" rel="stylesheet">
   <link href="styles/remedy.css" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  <script defer src="scripts/script.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="images/logo.png">
+  <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
@@ -18,13 +18,16 @@
   <!-- Voeg hier een skip to main link toe en maak deze hidden absolute en left -9999em behavior smooth toe met @media (prefers-reduced-motion:nopreference) en voeg :focus-visible toe met left:0 ;-->
 <header>
   <ul id="promo-bar">
-  <li><button id="disable-close-btn">X</button></li>
+  <li><button id="disable-close-btn" aria-label="close blackfriday popup">
+      <span></span>
+      <span></span>
+  </button></li>
   <li><p>Bespaar tot wel 20% bij de blackfriday sale</p></li>
   <li><a href="#" aria-label="Webshop sonos">Shop nu</a></li>
   </ul>
 
 
-  <nav>
+  <nav id="main-nav">
     <!-- Logo -->
     <a href="#" aria-label="Sonos homepage">
       SONOS
@@ -48,7 +51,7 @@
     </div>
 
     <!-- Hamburger -->
-    <button type="button" aria-label="Menu openen" aria-expanded="false">
+    <button type="button" id="nav-toggle" aria-label="Menu openen" aria-expanded="false">
       <span></span>
       <span></span>
     </button>
