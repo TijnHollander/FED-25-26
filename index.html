@@ -1,185 +1,154 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="author" content="jouw naam">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sonos homepage</title>
-  <link href="styles/style.css" rel="stylesheet">
-  <link href="styles/root.css" rel="stylesheet">
-  <link href="styles/remedy.css" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="images/logo.png">
-  <script src="scripts/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="jouw naam">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sonos homepage</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/root.css" rel="stylesheet">
+    <link href="styles/remedy.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/logo.png">
+    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
 
 
-  <!-- Voeg hier een skip to main link toe en maak deze hidden absolute en left -9999em behavior smooth toe met @media (prefers-reduced-motion:nopreference) en voeg :focus-visible toe met left:0 ;-->
-<header>
-  <ul id="promo-bar">
-  <li><button id="disable-close-btn" aria-label="close blackfriday popup">
-      <span></span>
-      <span></span>
-  </button></li>
-  <li><p>Bespaar tot wel 20% bij de blackfriday sale</p></li>
-  <li><a href="#" aria-label="Webshop sonos">Shop nu</a></li>
-  </ul>
+    <!-- Voeg hier een skip to main link toe en maak deze hidden absolute en left -9999em behavior smooth toe met @media (prefers-reduced-motion:nopreference) en voeg :focus-visible toe met left:0 ;-->
+    <header>
+        <ul id="promo-bar">
+            <li><button id="disable-close-btn" aria-label="close blackfriday popup">
+                    <span></span>
+                    <span></span>
+                </button></li>
+            <li>
+                <p>Bespaar tot wel 20% bij de blackfriday sale</p>
+            </li>
+            <li><a href="#" aria-label="Webshop sonos">Shop nu</a></li>
+        </ul>
 
 
-  <nav id="main-nav">
-    <!-- Logo -->
-    <a href="#" aria-label="Sonos homepage">
-      SONOS
-    </a>
+        <nav id="main-nav">
+            <!-- Logo -->
+            <a href="#" aria-label="Sonos homepage">
+                SONOS
+            </a>
 
-    <!-- Midden-links -->
-    <ul>
-      <li><a href="#">Black Friday Sale</a></li>
-      <li><a href="#">Shoppen</a></li>
-      <li><a href="#">Home cinema</a></li>
-      <li><a href="#">Speakers</a></li>
-      <li><a href="#">Leer meer</a></li>
-      <li><a href="#">Ondersteuning</a></li>
-    </ul>
+            <!-- Midden-links -->
+            <ul>
+                <li><a href="#">Black Friday Sale</a></li>
+                <li><a href="#">Shoppen</a></li>
+                <li><a href="#">Home cinema</a></li>
+                <li><a href="#">Speakers</a></li>
+                <li><a href="#">Leer meer</a></li>
+                <li><a href="#">Ondersteuning</a></li>
+            </ul>
 
-    <!-- Icons -->
-    <div>
-      <button type="button" aria-label="Account">U</button>
-      <button type="button" aria-label="Zoeken">S</button>
-      <button type="button" aria-label="Winkelwagen">S</button>
-    </div>
+            <!-- Icons -->
+            <menu>
+                <button type="button" aria-label="Account">U</button>
+                <button type="button" aria-label="Zoeken">S</button>
+                <button type="button" aria-label="Winkelwagen">S</button>
+            </menu>
 
-    <!-- Hamburger -->
-    <button type="button" id="nav-toggle" aria-label="Menu openen" aria-expanded="false">
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
-</header>
-
-
-<!-- Hero -->
-<article class="hero">
-  <video class="hero-vid" src="./images/sonos.mp4" autoplay muted loop playsinline></video>
-
-  <div class="hero-content">
-    <h1>Met geluid voel je je thuis</h1>
-    <a href="#" class="hero-btn" aria-label="Sonos webshop voor cadeaus">Shop cadeaus</a>
-  </div>
-</article>
-
-<!-- Main -->
-<main>
+            <!-- Boerger -->
+            <button type="button" id="nav-toggle" aria-label="Menu openen" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
 
 
+    <!-- Hero -->
+    <section class="hero">
+        <video class="hero-vid" src="./images/sonos.mp4" autoplay muted loop playsinline></video>
 
-<!-- Article first child -->
-  <article>
-    <img src="./images/sonosFood.jpg" alt="">
-    <h2>Geluid voor elke ruimte</h2>
-    <p>Kies de perfecte speaker, soundbar of koptelefoon voor elke kamer in huis.</p>
-    <a href="#" aria-label="Koop nu een Sonos Roam">Koop nu</a>
-  </article>
-        <!-- hoe de structuur moet
+        <div class="hero-content">
+            <h1>Met geluid voel je je thuis</h1>
+            <a href="#" class="hero-btn" aria-label="Sonos webshop voor cadeaus">Shop cadeaus</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <main>
+
         <section>
-    <h2>zoals</h2>
-    <ul>
-      <li>
-        <h3>Ongelofelijk helder</h3>
-      <p>Elke speaker wordt van binnenuit ontworpen met briljante akoestiek en ultramoderne software.</p>
-      <blockquote>
-        <strong>4000+</strong> gepatenteerde innovaties
-      </blockquote>
-      </li>
-       <img src="./images/sonosBox.png" alt="">
-      <li>
-         <img src="./images/expert.png" alt="Giles Martin in een studio">
-      </li>
-          <li>
-                  <h3>Ongelofelijk helder</h3>
-      <p>Elke speaker wordt van binnenuit ontworpen met briljante akoestiek en ultramoderne software.</p>
-      <blockquote>
-        <strong>4000+</strong> gepatenteerde innovaties
-      </blockquote>
-          </li>
-    </ul>
-  </section>
--->
-  <!-- Articles  grid naast elkaar GRID - GRID DIT MOET VERBETERED WORDEN-->
-  <article>
-    <section>
-    <h2>Zoals het hoort te klinken</h2>
-    </section>
-      </article>
+            <img src="./images/sonosFood.jpg" alt="">
+            <h2>Geluid voor elke ruimte</h2>
+            <p>Kies de perfecte speaker, soundbar of koptelefoon voor elke kamer in huis.</p>
+            <a href="#" aria-label="Koop nu een Sonos Roam">Koop nu</a>
+        </section>
 
+        <section>
+            <h2>Zoals het hoort te klinken</h2>
+            <ul>
+                <li>
+                    <h3>Ongelofelijk helder</h3>
+                    <p>Elke speaker wordt van binnenuit ontworpen met briljante akoestiek en ultramoderne software.</p>
+                    <blockquote>
+                        <strong>4000+</strong> gepatenteerde innovaties
+                    </blockquote>
+                </li>
+                <li>
+                    <img src="./images/sonosBox.png" alt="Giles Martin in een studio">
+                </li>
+                <li>
+                    <h3>Getuned door experts</h3>
+                    <p>Oscar- en Grammy-winnende producenten, mixers en artiesten finetunen de geluidsbeleving. Zo hoor
+                        je
+                        niet alleen elk detail, maar voel je de emotie.</p>
+                    <blockquote>
+                        <quote>"Het is een artistieke benadering van geluid"</quote cite="Giles Martin"> Grammy-winnende
+                        muziekproducent en Sonos Sound Experience Leader
+                    </blockquote>
+                </li>
+                                <li>
+                    <img src="./images/expert.png" alt="Giles Martin in een studio">
+                </li>
+                <li>
+                    <h3>Perfect in balans</h3>
+                    <p>Onze eigen Trueplay™ tuning-technologie past het geluid aan je unieke omgeving aan voor een
+                        luisterbeleving die ronduit luxueus is.</p>
+                    <a href="#" aria-label="Bekijk alle producten van Sonos">Ontdek producten</a>
+                </li>
+                <li>
+                    <video class="sonos-animation" src="./images/animationSonos.mp4" autoplay muted loop
+                        playsinline></video>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <article>
+                <h3>Speakers mixen en matchen</h3>
+                <p>Alles werkt naadloos samen via wifi. Begin met één kamer en voeg er later meer toe als je er klaar
+                    voor bent.</p>
+            </article>
+            <figure><img src="./images/sonosRoamBoxes.png"></img></figure>
 
-      <article>
-    <section>
-      <h3>Ongelofelijk helder</h3>
-      <p>Elke speaker wordt van binnenuit ontworpen met briljante akoestiek en ultramoderne software.</p>
-      <blockquote>
-        <strong>4000+</strong> gepatenteerde innovaties
-      </blockquote>
-    </section>
-    <section>
- <img src="./images/sonosBox.png" alt="">
-    </section>
-</article>
-  
-  <article>
-    <section>
- <img src="./images/expert.png" alt="Giles Martin in een studio">
-    </section>
-    <section>
-    <h3>Getuned door experts</h3>
-    <p>Oscar- en Grammy-winnende producenten, mixers en artiesten finetunen de geluidsbeleving. Zo hoor je niet alleen elk detail, maar voel je de emotie.</p>
-          <blockquote>
-        <quote>"Het is een artistieke benadering van geluid"</quote cite="Giles Martin
+            </article>
+        </section>
 
-"> Grammy-winnende muziekproducent en Sonos Sound Experience Leader
-      </blockquote>
-    </section>
-  </article>
-  
-  <article>
-    <section>
-    <h3>Perfect in balans</h3>
-    <p>Onze eigen Trueplay™ tuning-technologie past het geluid aan je unieke omgeving aan voor een luisterbeleving die ronduit luxueus is.</p>
-        <a href="#" aria-label="Bekijk alle producten van Sonos">Ontdek producten</a>
-    </section>
-    <section>
-  <video class="sonos-animation" src="./images/animationSonos.mp4" autoplay muted loop playsinline></video>
-    </section>
-  </article>
-
-  <article>
-    <section>
-      <h3>Speakers mixen en matchen</h3>
-      <p>Alles werkt naadloos samen via wifi. Begin met één kamer en voeg er later meer toe als je er klaar voor bent.</p>
-    </section>
-    <section>
-      <figure><img src="./images/sonosRoamBoxes.png"></img></figure>
-    </section>
-  </article>
-  <!-- end grid layout EN EINDE VERBETERING
-   -->
-    <!-- 3 grids -->
-<article>
-  <section>
-    <figure><img src="./images/gridimg1.avif"></img></figure>
-    <p>Combineer twee speakers voor verbluffend gedetailleerd stereogeluid.</p>
-  </section>
-    <section>
-    <figure><img src="./images/gridimg2.avif"></img></figure>
-    <p>Creëer een surround sound-systeem voor meeslepend entertainment.</p>
-  </section>
-    <section>
-    <figure><img src="./images/gridimg3.avif"></img></figure>
-    <p>Verplaats de muziek probleemloos door je huis en daarbuiten.</p>
-  </section>
-</article>
-</main>
+        <!-- 3 grids -->
+        <section>
+            <ul>
+                <li>
+                    <figure><img src="./images/gridimg1.avif"></img></figure>
+                    <p>Combineer twee speakers voor verbluffend gedetailleerd stereogeluid.</p>
+                </li>
+                <li>
+                    <figure><img src="./images/gridimg2.avif"></img></figure>
+                    <p>Creëer een surround sound-systeem voor meeslepend entertainment.</p>
+                </li>
+                <li>
+                    <figure><img src="./images/gridimg3.avif"></img></figure>
+                    <p>Verplaats de muziek probleemloos door je huis en daarbuiten.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
 
 
 </body>
