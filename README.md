@@ -146,11 +146,16 @@ Lijst met bevindingen die in de test naar voren kwamen:
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  We hebben een teams groepje aangemaakt waarbij we hebben overlegd.
+  Zelf heb ik momenteel nog niet echt veel vragen aangezien ik eerder heb gevraagd voor feedback. Echter ga ik wel goed noteren van de feedback van anderen en belangrijke punten van het gesprek schrijf ik.
+
+  | Ronald         |   Daniel           | Iz-Dine.     | Mo.              |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | dit bespreken  | en dit             | en ik dit    | Ziek.            |
+  | en dat ook nog | dit als er tijd is | nog een punt |                  |
+  | HTML-Structuur |.                   |.             |.                 |
+  | Kleur over-    |
+  | background-img |           
 
 
   ### Verslag van meeting
