@@ -530,13 +530,28 @@ main>section:nth-of-type(3) {
   gap: 2rem;
 }
 
-main>section:nth-of-type(3)>article h3 {
+main>section:nth-of-type(3) {
+  & h2 {
+  font-size: var(--font-size-xxlarge);
+  color: var(--text-color);
+  font-weight: 400;
+  grid-column: 1 / -1;
+  text-align: center;
+  }
+  & div {
+    
+  }
+  & h3 {
   font-size: var(--font-size-xlarge);
   font-weight: 400;
   color: var(--text-color);
+  } & img {
+
+  }
+
 }
 
-main>section:nth-of-type(3)>article p {
+main>section:nth-of-type(3)>div p {
   font-size: 1.2rem;
   color: var(--secondary-color);
 }
@@ -558,7 +573,7 @@ main>section:nth-of-type(3) img {
 /* SECTION 4: 3 kolommen    */
 /****************************/
 main>section:nth-of-type(4) {
-  grid-column: 1 / -1;
+  display: grid;
 }
 
 main>section:nth-of-type(4)>ul {
