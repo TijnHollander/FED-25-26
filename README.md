@@ -142,6 +142,9 @@ Lijst met bevindingen die in de test naar voren kwamen:
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Dit ging goed:
+  * CSS (Werken met nth-oftype werken ging erg vlot).
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -161,10 +164,26 @@ Lijst met bevindingen die in de test naar voren kwamen:
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - 1: Gebruik consistent images onder HEADINGS. Dit werd aangekaart en zelf kwam ik erachter dat ik nog her en daar wat imgs boven headings had.
+  - 2: Onderzoek container queries
+  - 3: Mijn website bleek mijn CSS er goed uit te zien. Echter bleek nogmaals uit feedback van andere dat mijn classes en ids weg moeten in de Hero, Sanne had dit ook al aangekaart. 
+  - 4: Ook was er eerder aangekaart dat de figures om mijn image's niet echt van toepassing zijn en gewoon weg kunnen. 
+  Conclusie voor mijn website: Een paar final kleine tweaks bij mijn HTML en dan ben ik helemaal up-to-date 
   - ...
+
+  #### Wat heb ik opgepakt tijdens dit gesprek?
+  * Gebruik consistent Headings boven de img attributes.
+  * Container queries kunnen erg hulpzaam zijn, voor het namaken van de Sonos website.
+  * Gebruik geen figures boven img;s tenzij er een caption echt iets over een img zegt.
+  * Gebruik consistent de W3C Validator, om te kijken of er errors zijn of nog e.v.t tips.
+  * Maak een aparte CSS bestand aan voor de 2e pagina
+  * Maak des noods een globale stylesheet aan waarbij elementen overeen komen op beide pagina;s 
+  * H1 verstoppen 
+
+
+  #### Wat moet ik nu verbeteren?
+  * Ik moet nu de figures om mijn images weghalen
+  * h1 die er nu staat weghalen, en een nieuwe toevoegen en verstoppen buiten de main 
 
 </details>
 

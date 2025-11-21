@@ -188,7 +188,7 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
 @media screen and (min-width: 64em) {
   header>nav>ul:nth-of-type(1) {
     display: flex;
-  }
+  } 
 
   /* hamburger = weg */
   header>nav>button:last-of-type {
