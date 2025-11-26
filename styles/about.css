@@ -1,0 +1,123 @@
+/********************************************/
+/* SECTION 1: 'Hoe Sonos werkt' + heroimg   */
+/********************************************/
+main > section:first-of-type {
+  background-color: #fff;
+  display: grid;
+  gap: 3rem;
+}
+
+/* 1e UL: titel + knop + afbeelding */
+main > section:first-of-type > ul:first-of-type {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* titel */
+main > section:first-of-type > ul:first-of-type > li:first-of-type h2 {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 400;
+}
+
+/* button */
+main > section:first-of-type > ul:first-of-type > li:nth-of-type(2) > a {
+  padding: 0.9rem 2.4rem; /* Maak ff generieke btn style ofzo dit is echt spaghetti code */
+  border-radius: 999px; /* zelfde hier maak gwn een pill aan in de root */
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+}
+
+/* image in de 1e section*/
+main > section:first-of-type > ul:first-of-type > li:nth-of-type(3) img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 2e UL */
+main > section:first-of-type > ul:nth-of-type(2) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* h2  */
+main > section:first-of-type > ul:nth-of-type(2) > li:first-of-type h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+/* p */
+main > section:first-of-type > ul:nth-of-type(2) > li:nth-of-type(2) p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--secondary-color, #555);
+}
+
+/***************/
+/* DESKTOP     */
+/***************/
+@media (min-width: 64em) {
+  /* 2 kolommen image over beide kolommen want dit ziet er nice uit */
+  main > section:first-of-type {
+    grid-template-columns: minmax(1fr);
+    column-gap: 4rem;
+  }
+
+  /* 1e UL */
+  main > section:first-of-type > ul:first-of-type {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(1fr);
+    align-items: start;
+  }
+
+  main > section:first-of-type > ul:first-of-type > li:first-of-type {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  main > section:first-of-type > ul:first-of-type > li:nth-of-type(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-top: 1.5rem;
+  }
+  main > section:first-of-type > ul:first-of-type > li:nth-of-type(3) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  /* 2e UL onderaan in 2 coloms naast elkaar */
+  main > section:first-of-type > ul:nth-of-type(2) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(1fr);
+    column-gap: 4rem;
+    margin-top: 3rem;
+  }
+
+  main > section:first-of-type > ul:nth-of-type(2) > li:first-of-type {
+    grid-column: 1 / 2;
+  }
+
+  main > section:first-of-type > ul:nth-of-type(2) > li:nth-of-type(2) {
+    grid-column: 2 / 3;
+    align-self: start;
+  }
+}
+
+/***************/
+/* Mobile      */
+/***************/
+@media (max-width: 64em) {
+  main > section:first-of-type {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+}
