@@ -1,5 +1,5 @@
 /********************************************/
-/* SECTION 1: 'Hoe Sonos werkt' + heroimg   */
+/* SECTION 1 "hoe sonos werkt met img"   */
 /********************************************/
 main > section:first-of-type {
   background-color: #fff;
@@ -7,11 +7,9 @@ main > section:first-of-type {
   gap: 3rem;
 }
 
-/* 1e UL: titel + knop + afbeelding */
+/* 1e UL */
 main > section:first-of-type > ul:first-of-type {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: grid;
   gap: 1.5rem;
 }
