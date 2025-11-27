@@ -196,19 +196,29 @@ Lijst met bevindingen die in de test naar voren kwamen:
 <details>
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
-  ### Stand van zaken
+### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+#### Dit ging goed:
+* Het aanmaken van de footer, ging vrij soepel, en ik ben zelf ook best tevreden met het eindresultaat, het enige dat ik nog wil doen is het nog meer responsive te maken door het naar dropdowns te laten veranderen.
+* Navigation in de Navbar ben ik ook blij mee, ik heb hier ook een leuke animatie bij toegevoegd doormiddel van transform en transition, ik heb 2 spans gepakt deze heb ik een border gegeven en ge-rotate, en dat zorgt voor een mooie overgang.
 
+
+#### Dit ging wat minder:
+* Grid layouts, ik ben persoonlijk nog niet helemaal tevreden over hoe mijn html structuur overgaat naar grid-layouts, ik ben zelf al perfectionistisch dus als iets me niet zint blijf ik het maar zien en kan ik het niet laten gaan. Echter heb ik tot heden hiervoor nog geen oplossing voor gevonden.
+ <img src="readme-images/gridLayout.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen is:
 
+- Ronald:
+- Daniel:
+- Iz-Dine: 
+* Nieuwe pagina layout vragen.
+
+- Ik zelf: 
+* Nieuwe pagina, grid-layout hoe kan ik dit het beste aanpakken? Zodat ik niet terugval naar de oude, waarmee ik niet tevreden ben.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
