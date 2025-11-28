@@ -372,7 +372,7 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
 /********************/
 /* MAIN GRID LAYOUT  */
 /********************/
-main {
+main > :not(.hero) {
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(1, 1fr);
