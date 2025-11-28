@@ -217,6 +217,7 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
 * Is het gebruik tekst van bepaalde afbeeldingen duidelijk genoeg?
 * Schaling foto oplossen
 - Daniel:
+* Vraag over navbar en styling over hoe de :root moet worden ingedeeld
 - Iz-Dine: 
 * Nieuwe pagina layout vragen.
 
@@ -226,9 +227,13 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - Label moet altijd een ID hebben als je een "for" gebruikt.
+  - List-style-type: ""; als je dit doet i.p.v list-style:none; is het beter voor de screenreader.
   - nog een punt
+  - Grid-template-areas kun je een grid-pre definen dormiddel van tekst. Hartstikke handig voor de home-pagina. (Je kunt een grid area leeg laten door een puntje > .)
+  - Begin in CSS met generieke dingen en bouw langzaam naar beneden naar specifieke dus Header | Header li | header li a | etc...
+  - Hero main
+  - Maak gebruik van de search tag
 - ...
 
 </details>
