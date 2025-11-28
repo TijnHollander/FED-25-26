@@ -81,7 +81,14 @@ main > section:first-of-type {
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
+
+} 
+
+@media (width < 1200px) {
+  main > section:first-of-type {
+    border-radius: 0;
+  }
+  }
 
 main > section:first-of-type img {
   position: absolute;
@@ -137,8 +144,11 @@ main > section:first-of-type a {
 /* SECTION 2:  GRIDERS */
 /************************/
 main section:nth-of-type(2) { 
+
+  & ul {
   display: grid;
   gap: 1em;
+  }
 
 
   & h2 {
