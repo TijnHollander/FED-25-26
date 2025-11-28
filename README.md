@@ -213,6 +213,9 @@ Lijst met bevindingen die in de test naar voren kwamen:
 Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen is:
 
 - Ronald:
+* Is het gebruik van comments duidelijk en overzichtelijk?
+* Is het gebruik tekst van bepaalde afbeeldingen duidelijk genoeg?
+* Schaling foto oplossen
 - Daniel:
 - Iz-Dine: 
 * Nieuwe pagina layout vragen.
