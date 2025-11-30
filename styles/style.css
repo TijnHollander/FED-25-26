@@ -1,19 +1,18 @@
-
 /**************/
 /* HERO       */
 /**************/
 
-
 .hero > section:first-of-type {
   position: relative;
-  height: 100vh;
+  height: var(--hero-height, 100vh);
   width: var(--max-width);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: 5%;
+  margin-bottom: var(--hero-bottom-margin, 5%);
 }
+
 .hero > section:first-of-type::after {
   content: "";
   position: absolute;
@@ -29,26 +28,23 @@
   object-fit: cover;
 }
 
-
-/* Overlay */
-
 /* Hero content */
 .hero-content {
   position: relative;
   text-align: center;
   color: var(--img-text);
   z-index: 2;
-  padding: 0 1rem;
+  padding: 0 var(--hero-content-padding-inline, 1rem);
 }
 
 .hero-content > h2 {
   font-size: var(--hero-title-size);
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--hero-heading-margin-bottom, 1.2rem);
 }
 
-/* Hero btn */
+/* Hero button */
 .hero > section:first-of-type a {
   cursor: pointer;
   display: inline-block;
@@ -60,35 +56,33 @@
   text-decoration: none;
   transition: 0.2s ease;
 }
+
 .hero > section:first-of-type a:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--hero-button-hover-overlay, rgba(255, 255, 255, 0.12));
 }
 
-
-
 /***************************/
-/* EERSTE GROTE WIDEE SECTION */
+/* EERSTE GROTE BREDE SECTION */
 /***************************/
 main > section:first-of-type {
   grid-column: 1 / -1;
   position: relative;
   width: 100%;
-  height: 56vh;
-  border-radius: var(--border-radius-xxlarge);
+  height: var(--feature-height, 56vh);
+  border-radius: var(--feature-border-radius, var(--border-radius-xxlarge));
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-
 } 
 
 @media (width < 1200px) {
   main > section:first-of-type {
     border-radius: 0;
   }
-  }
+}
 
 main > section:first-of-type img {
   position: absolute;
@@ -110,19 +104,14 @@ main > section:first-of-type * {
   position: relative;
   z-index: 3;
   color: var(--main-color);
-  margin: 0.5em 0;
-  font-size: clamp(2rem, 5vw, 3rem);
+  margin: var(--feature-inner-gap, 0.5em) 0;
+  font-size: var(--feature-title-size);
   font-weight: 400;
-
-  & p {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    max-width: 600px;
-  }
 }
 
 main > section:first-of-type p {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  max-width: 600px;
+  font-size: var(--feature-text-size);
+  max-width: 37.5rem; /* 600px */
 }
 
 main > section:first-of-type a {
@@ -134,36 +123,43 @@ main > section:first-of-type a {
   font-size: var(--primary-button-font-size);
   text-decoration: none;
   transition: 0.2s ease;
+}
 
-  &:hover {
-    background: rgba(255, 255, 255, 0.12);
-  }
+main > section:first-of-type a:hover {
+  background: var(--hero-button-hover-overlay, rgba(255, 255, 255, 0.12));
 }
 
 /************************/
 /* SECTION 2:  GRIDERS */
 /************************/
 main section:nth-of-type(2) { 
+  /* De layout van de section zelf komt uit main > :not(.hero) in root.css */
+}
 
-  & ul {
+main section:nth-of-type(2) ul {
   display: grid;
-  gap: 1em;
-  }
+  gap: var(--gap-medium);
+}
 
-
-  & h2 {
+main section:nth-of-type(2) h2 {
   font-size: var(--font-size-xxlarge);
   font-weight: 400;
   text-align: center;
   margin-bottom: 1.5rem;
-  } & h3 {
-      font-size: var(--font-size-xlarge);
+}
+
+main section:nth-of-type(2) h3 {
+  font-size: var(--font-size-xlarge);
   font-weight: 400;
-  } & p {
-        font-size: 1.2rem;
-    font-weight: 400;
-  } & blockquote {
-      margin-top: 1.5em;
+}
+
+main section:nth-of-type(2) p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+main section:nth-of-type(2) blockquote {
+  margin-top: 1.5em;
   font-size: var(--font-size-small);
   color: var(--secondary-text);
   border: 1px solid var(--tertiary-color);
@@ -171,9 +167,7 @@ main section:nth-of-type(2) {
   height: fit-content;
   width: fit-content;
   padding: 1em;
-  } 
 }
-
 
 main section:nth-of-type(2) li {
   display: grid;
@@ -184,16 +178,19 @@ main section:nth-of-type(2) li {
     "titel foto"
     "tekst foto"
     "quote foto";
+}
 
-&:nth-of-type(even) {
-    grid-template-areas:
-      "foto titel"
-      "foto tekst"
-      "foto quote";
-  }
+/* Even items gespiegeld */
+main section:nth-of-type(2) li:nth-of-type(even) {
+  grid-template-areas:
+    "foto titel"
+    "foto tekst"
+    "foto quote";
+}
 
-  /* Onder 60em: alles onder elkaar */
-  @media (width < 60em) {
+/* Onder 60em: alles onder elkaar */
+@media (width < 60em) {
+  main section:nth-of-type(2) li {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 0.5em;
@@ -203,14 +200,14 @@ main section:nth-of-type(2) li {
       "titel"
       "tekst"
       "quote";
+  }
 
-    &:nth-of-type(even) {
-      grid-template-areas:
-        "foto"
-        "titel"
-        "tekst"
-        "quote";
-    }
+  main section:nth-of-type(2) li:nth-of-type(even) {
+    grid-template-areas:
+      "foto"
+      "titel"
+      "tekst"
+      "quote";
   }
 }
 
@@ -230,21 +227,20 @@ main section:nth-of-type(2) li a {
   justify-self: start;
   align-self: start;
 
-
   display: inline-block;
   margin-top: 1rem;
   padding: var(--primary-button-padding);
   border-radius: var(--primary-button-radius);
   border: 1px solid var(--primary-btn-border-color);
-  color: var(--primay-text);
+  color: var(--primary-text);
   font-size: var(--primary-button-font-size);
   text-decoration: none;
   transition: 0.2s ease;
-  }
+}
 
 main section:nth-of-type(2) li a:hover {
-    background: rgba(0, 0, 0, 0.06);
-  }
+  background: rgba(0, 0, 0, 0.06);
+}
 
 main section:nth-of-type(2) li blockquote {
   grid-area: quote;
@@ -255,115 +251,6 @@ main section:nth-of-type(2) li video {
   grid-area: foto;
 }
 
-
-
-
-
-
-/* main section:nth-of-type(2) {
-  grid-column: 1 / -1;
-}
-
-main section:nth-of-type(2) ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 2rem;
-}
-
-} */
-
-
-/*  blockquotes */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* FIX IN HET MIDDEN GAAN */
-/* EN FIX COLORING HIERO */
-
-/* main section:nth-of-type(2) blockquote {
-
-  & strong {
-    font-size: 2.2em;
-    font-weight: 400;
-  }
-} */
-
-
-
-/* imgs en vid in section 2 */
-/* main section:nth-of-type(2) img,
-
-
-main section:nth-of-type(2) a {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: var(--primary-button-padding);
-  border-radius: var(--primary-button-radius);
-  border: 1px solid var(--primary-btn-border-color);
-  color: var(--primay-text);
-  font-size: var(--primary-button-font-size);
-  text-decoration: none;
-  transition: 0.2s ease;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.06);
-  }
-} */
-
-
-/*****************/
-/* SONOS ANIMATIE */
-/*****************/
-/* .sonos-animation {
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius-medium);
-} */
-
-/********************************************/
-/* RESPONSIVE LAYOUTS VOOR DE SECTIONS      */
-/********************************************/
-/* @media screen and (min-width: 54em) {
-
-  main section:nth-of-type(2) ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
-  }
-  & li:nth-of-type(3) {
-    order: 1;
-  }
-  & li:nth-of-type(4) {
-    order: 0;
-  }
-  & li:nth-of-type(5) {
-    order: 3;
-  }
-  & li:nth-of-type(6) {
-    order: 4;
-  }
-}
-
-@media screen and ( 54em > width) {
-main section:nth-of-type(2) ul li {
-  order: 0;
-}
-} */
-
 /****************************/
 /* SECTION 3: mix & match   */
 /****************************/
@@ -371,34 +258,34 @@ main section:nth-of-type(3) {
   display: grid;
   gap: 2rem;
 }
+
 main section:nth-of-type(3) p {
-width: 100%;
+  width: 100%;
 }
 
-main section:nth-of-type(3) {
-  & h2 {
+main section:nth-of-type(3) h2 {
   font-size: var(--font-size-xxlarge);
   font-weight: 400;
   grid-column: 1 / -1;
   text-align: center;
-  }
-  & div {
-    grid-column: 1 / -1;
-  }
-  & p {
-  font-size: 1.2rem;
-  }
-  & h3 {
-  font-size: var(--font-size-xlarge);
-  font-weight: 400;
-  } & img {
-
-  }
-
 }
 
-main section:nth-of-type(3) h3, p{
-width: 100%;
+main section:nth-of-type(3) > div {
+  grid-column: 1 / -1;
+}
+
+main section:nth-of-type(3) p {
+  font-size: 1.2rem;
+}
+
+main section:nth-of-type(3) h3 {
+  font-size: var(--font-size-xlarge);
+  font-weight: 400;
+}
+
+main section:nth-of-type(3) h3,
+main section:nth-of-type(3) p {
+  width: 100%;
 }
 
 main section:nth-of-type(3) img {
@@ -412,32 +299,30 @@ main section:nth-of-type(3) img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: 5em;
-  } 
+  }
+
   main section:nth-of-type(3) p {
     width: 40vw;
   }
-    main section:nth-of-type(3) h3 {
+
+  main section:nth-of-type(3) h3 {
     width: 40vw;
   }
-
 }
 
 /****************************/
 /* SECTION 4: 3 kolommen    */
 /****************************/
 
-main>section:nth-of-type(4)>ul {
-display: grid;
-grid-template-columns: repeat(1, minmax(0, 1fr));
-list-style: none;
-grid-gap: var(--grid-gutter);
+main > section:nth-of-type(4) > ul {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  list-style: none;
+  grid-gap: var(--grid-gutter);
 }
-
 
 @media screen and (min-width: 54em) {
-  main>section:nth-of-type(4)>ul {
-grid-template-columns: repeat(3, minmax(0, 1fr));
+  main > section:nth-of-type(4) > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
-

@@ -12,98 +12,160 @@ body {
 }
 
 :root {
-  /* Voeg hier alle kleur variables toe */
+  /* Color scheme */
   color-scheme: light dark;
+
+  /* light-dark color kleurtjes */
   --primary-background: light-dark(#ffffff, #000000);
   --secondary-background: light-dark(#3b410b, #262a07);  
   --tertiary-background: light-dark(#ffffff, #1c1b22);
+
   --img-text: light-dark(#ffffff, #ffffff);
   --primary-text: light-dark(#000000, #ffffff);
   --secondary-text: light-dark(#000000, #e1e1e1);
-  --tertiary-text: light-dark(#333, #ffffff);
+  --tertiary-text: light-dark(#333333, #ffffff);
   --primary-text-link: light-dark(#5b672a, #7b8d33);
+
   --primary-btn-border-color: light-dark(#000000, #ffffff);
-  /* Background color op imgs toevoegen */
-  /* Input field text lichter maken i.p.v donkerder */
-    /* Input field text lichter maken i.p.v donkerder */
-      /* Input field text lichter maken i.p.v donkerder */
-        /* Input field text lichter maken i.p.v donkerder */
-          /* Input field text lichter maken i.p.v donkerder */
-            /* Input field text lichter maken i.p.v donkerder */
 
+  /* algemeene zooi */
+  --max-width: 100%;
 
-  /* General */
-  --max-width: 100%; 
-  /* Colors */
+  /* Legacy */
   --main-color: #ffffff;
-  /* Actueel */
   --primary-color: #222222;
   --secondary-color: #555555;
   --tertiary-color: #888888;
   --accent-color: #ff0000;
   --background-color: #3b410b;
   --promo-bar-background: #3a410b;
-  /* Actueel */
+
   --text-color: #000000;
-  /* Actueel */
   --warning-color: #ffcc00;
   --error-color: #ff0000;
-  /* Font Sizes */
-  --font-size-small: 1em;
-  --font-size-medium: clamp(1rem, 10vw, 1.4rem);
-  --font-size-medium:clamp(1rem, 0.8125rem + 0.9375vw, 1.375rem);
+
+  /* typo */
+  --font-size-small: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-medium: clamp(1rem, 0.8125rem + 0.9375vw, 1.375rem);
   --font-size-large: clamp(1rem, 10vw, 1.6rem);
-  --font-size-xlarge: clamp(1rem, 10vw, 4rem);
-  --font-size-xxlarge: clamp(1rem, 10vw, 6rem); /* CLAMPPPP */
-  /* White spaces */
-  --ws-small: 1px;
-  --ws-medium: 1px;
-  --ws-large: 1px;
-  --ws-xlarge: 1px;
-  /* Border radius */
+  --font-size-xlarge: clamp(1.4rem, 3vw, 2rem);
+  --font-size-xxlarge: clamp(2rem, 5vw, 3.5rem);
+
+  /* Hero  */
+  --hero-title-size: clamp(2.4rem, 5vw, 4.8rem);
+  --feature-title-size: clamp(2.2rem, 4vw, 3.4rem);
+  --feature-text-size: clamp(1rem, 2vw, 1.3rem);
+  --feature-text-color: #ffffff;
+
+  /* White space scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Border-radius */
   --border-radius-small: 4px;
   --border-radius-medium: 8px;
   --border-radius-large: 12px;
   --border-radius-xlarge: 16px;
   --border-radius-xxlarge: 50px;
+
   /* Padding */
-  --padding-small: 4px;
-  --padding-medium: 8px;
-  --padding-large: 12px;
-  --padding-xlarge: 16px;
-  --padding-xxlarge: 1rem;
-  /* Gap */
+  --padding-small: 0.5rem;
+  --padding-medium: 0.75rem;
+  --padding-large: 1rem;
+  --padding-xlarge: 1.5rem;
+  --padding-xxlarge: 2rem;
+
+  /* gap */
   --gap-small: 0.6em;
   --gap-medium: 1em;
   --gap-large: 1.8em;
   --gap-xlarge: 2.4em;
-  /* Cards */
-  --card-color: #333;
-  --card-background: #fff;
-  /* Hero Section */
-  --hero-overlay: rgba(0, 0, 0, 0.35);
 
-  --hero-title-size: clamp(2.4rem, 5vw, 4.8rem);
+  /* Header, nav */
+  --header-height-mobile: 10vh;
+  --promo-bar-height: 5vh;
+  --nav-padding-inline: 1.5rem;
+  --nav-padding-block: 0.75rem;
+  --nav-gap: 2rem;
+  --nav-icon-gap: 1rem;
+  --nav-icon-gap-desktop: 1.5rem;
+  --nav-hover-underline-height: 1px;
+  --nav-hover-underline-offset: 0.25rem;
+  --hamburger-line-height: 2px;
+  --hamburger-gap: 0.25rem;
+  --hamburger-size: 2rem;
+
+  /* Hero */
+  --hero-height: 100vh;
+  --hero-overlay: rgba(0, 0, 0, 0.35);
+  --hero-content-padding-inline: 1rem;
+  --hero-heading-margin-bottom: 1.2rem;
+  --hero-button-hover-overlay: rgba(255, 255, 255, 0.12);
+
+  /* Featuresssssssss */
+  --feature-height: 56vh;
+  --feature-border-radius: var(--border-radius-xxlarge);
+  --feature-inner-gap: 0.5em;
 
   /* Primary Button */
   --primary-button-radius: 40px;
   --primary-button-padding: 0.9em 2.2em;
   --primary-button-font-size: 1.1rem;
+  --primary-button-border-width: 1px;
 
-
-  /* onder de hero */
-  --feature-height: 65vh;
-  --feature-overlay: rgba(0, 0, 0, 0.45);
-
-  --feature-title-size: clamp(2.2rem, 4vw, 3.4rem);
-  --feature-text-size: clamp(1rem, 2vw, 1.3rem);
-
-  --feature-text-color: #ffffff;
-
-    --grid-max-width: 75rem;
-  --grid-gutter: var(--space-s-3xl, clamp(0.5rem, -2.7981rem + 19.6154vw, 2.5rem));
+  /* Grids */
+  --grid-max-width: 75rem;
+  --grid-gutter: var(--space-md);
+  --grid-gutter-large: clamp(0.5rem, -2.7981rem + 19.6154vw, 2.5rem);
   --grid-columns: 4;
+
+  /* Sections */
+  --section-padding: 1em;
+  --section-gap: 2em;
+
+  /* Hero + main section spacing */
+  --hero-bottom-margin: 5%;
+
+  /* footer */
+  --footer-background: #222222;
+  --footer-text-color: #ffffff;
+  --footer-border-color: #444444;
+  --footer-link-color: #cccccc;
+  --footer-link-hover-decoration: underline;
+  --footer-top-margin: 4rem;
+  --footer-padding-block: 2.5rem;
+  --footer-gap-columns: 2rem;
+  --footer-gap-links: 0.75rem;
+  --footer-gap-links-wide: 1.5rem;
+  --footer-newsletter-title-size: 2rem;
+  --footer-checkbox-gap: 0.5rem;
+  --footer-block-gap: 1.5rem;
+  --footer-blockquote-gap: 2rem;
+
+  /* Inputs, form */
+  --input-padding-block: 0.9rem;
+  --input-padding-inline: 1rem;
+  --input-border-radius-pill: 999px;
+  --input-background: #111111;
+  --input-text-color: #ffffff;
+
+  /* idk */
+  --section-cta-margin-top: 1rem;
+
+  /* newssletter form */
+  --newsletter-gap: 1rem;
+
+  /* Blockquotes */
+  --blockquote-border-width: 1px;
+  --blockquote-padding: 1em;
 }
+
 
 /**********************/
 /* HEADER + PROMO BAR */
