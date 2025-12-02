@@ -299,6 +299,24 @@ header>nav>menu:nth-of-type(1)>button {
   padding: 0;
 }
 
+
+header>nav>ul:nth-of-type(2)  {
+  list-style: "";
+  gap: var(--gap-large);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  
+  
+}
+
+/* Links in menu */
+header>nav>ul:nth-of-type(2) svg {
+  color: var(--primary-text);
+  white-space: nowrap;
+  height: 17px;
+}
+
 /* Hamburger  */
 header>nav>button:last-of-type {
   justify-self: end;
@@ -329,7 +347,7 @@ header>nav>button:last-of-type {
 #disable-close-btn span {
   display: block;
   height: 2px;
-  width: 100%;
+  width: var(--max-width);
   background: var(--main-color); /* Moet wit blijven */
 }
 
@@ -345,7 +363,7 @@ header>nav>button:last-of-type {
 header>nav>button:last-of-type span {
   display: block;
   height: 2px;
-  width: 100%;
+  width: var(--max-width);
   background: var(--primary-text);
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -425,7 +443,7 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
   }
 
   header>nav>ul:nth-of-type(1) li a:hover::after {
-    width: 100%;
+    width: var(--max-width);
   }
 }
 
@@ -434,7 +452,7 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
 /********************/
 /* MAIN GRID LAYOUT  */
 /********************/
-main > :not(.hero) {
+main > :not(.hero, .reverse-scroll-animation) {
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(1, 1fr);
@@ -641,6 +659,6 @@ footer > section:last-of-type > ul a:hover {
 /* ALGEMENE IMG   */
 /******************/
 main img {
-  max-width: 100%;
+  max-width: var(--max-width);
   height: auto;
 }

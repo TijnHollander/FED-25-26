@@ -5,6 +5,16 @@ main {
   gap: 10em;
 }
 
+main section a {
+  padding: var(--primary-button-padding);
+  border-radius: var(--primary-button-radius);
+  border: 1px solid var(  --primary-btn-border-color);
+  color: var( --primary-text);
+  font-size: var(--primary-button-font-size);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
 /* Eerste section in main */
 main>section:nth-of-type(1) {
   max-width: var(--grid-max-width);
@@ -249,3 +259,68 @@ main section:nth-of-type(3) p {
     order: -1;
   }
 }
+
+
+/******************************/
+/* SECTION 4 scroll animation */
+/******************************/
+
+
+/* https://youtu.be/gYwmiZ0Mza8 */
+.reverse-scroll-animation {
+height: 400vh;
+overflow: visible;
+view-timeline-name: --section-pin-t1;
+view-timeline-axis: block;
+
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+  width: 100vw;
+  overflow-y: clip;
+}
+
+/* Three column layout */
+.columns {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  overflow-y: hidden;
+}
+
+.column {
+  gap: 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Shift entire column up, but not so much that it goes out of view */
+.column-reverse {
+	transform: translateY(calc(-100% + 100vh));
+  flex-direction: column-reverse;
+
+  /* deze animation doet weird geen idee wat het is vraag dit ff */
+  animation: adjust-position linear forwards;
+	animation-timeline: scroll(root block);
+
+}
+
+
+/* Set up Animation */
+@keyframes adjust-position {
+	/* Start position: shift entire column up, but not so that it goes out of view */
+	from {
+		transform: translateY(calc(-100% + 100vh));
+	}
+
+	/* End position: shift entire column down, but not so that it goes out of view */
+	to {
+		transform: translateY(calc(100% - 100vh));
+	}
+}
+
+/* Hook our animation with the timeline to our columns */

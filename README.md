@@ -327,6 +327,7 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   2. bron 2  Nav: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
   3. bron 3 FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   4. Bron 4: Child delay animations: https://stackoverflow.com/questions/8294400/css-animations-with-delay-for-each-child-element
-  5. Bron 5: 
+  5. Bron 5: Scroll-driven-animations: https://youtu.be/gYwmiZ0Mza8
+
 
 </details>
