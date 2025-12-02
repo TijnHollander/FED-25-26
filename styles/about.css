@@ -278,9 +278,7 @@ view-timeline-axis: block;
 .sticky {
   position: sticky;
   top: 0;
-
   height: 100vh;
-  width: 100vw;
   overflow-y: clip;
 }
 
