@@ -134,9 +134,6 @@ main > section:first-of-type a:hover {
 /************************/
 /* SECTION 2:  GRIDERS */
 /************************/
-main section:nth-of-type(2) { 
-  /* De layout van de section zelf komt uit main > :not(.hero) in root.css */
-}
 
 main section:nth-of-type(2) ul {
   display: grid;
