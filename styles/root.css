@@ -28,6 +28,9 @@ body {
 
   --primary-btn-border-color: light-dark(#000000, #ffffff);
 
+      --focus-ring-color: light-dark(#000000, #ffffff);
+    --focus-ring-color-img: light-dark(#ffffff, #ffffff);
+
   /* algemeene zooi */
   --max-width: 100%;
 
@@ -164,6 +167,9 @@ body {
   /* Blockquotes */
   --blockquote-border-width: 1px;
   --blockquote-padding: 1em;
+
+  /* BTN hover statesss */
+
 }
 
 
@@ -651,6 +657,38 @@ footer > section:last-of-type > ul a:hover {
     padding-bottom: 1rem;
   }
 }
+
+
+/******************/
+/* ALGEMENE BTN, ETC. STATES   */
+/******************/
+
+/* Button states toevoegen, Active / hover / focus */
+/* Button states toevoegen, Active / hover / focus */
+/* Button states toevoegen, Active / hover / focus */
+
+/* Header states */
+header a:focus-visible:not(.promo-bar) {
+   outline: 4px solid var(--focus-ring-color);
+   outline-offset: 5px;
+}
+header a:active {
+background-color: pink; /* Tijdelijke placeholder */
+}
+
+
+.promo-bar:focus-visible {
+   outline: 4px solid var(--focus-ring-color-img);
+   outline-offset: 5px;
+}
+
+
+/* Main states */
+main > a:focus-visible:not(img) {
+     outline: 4px solid var(--focus-ring-color);
+     outline-offset: 5px;
+}
+
 
 
 
