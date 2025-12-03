@@ -234,13 +234,16 @@ header ul:nth-of-type(1) a {
   text-underline-position: below;
 }
 
+
+
+
 /**********************/
 /* MAIN NAV (structure based) */
 /**********************/
 
 header>nav {
   background-color: var(--tertiary-background);
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--primary-background);
   z-index: 10;
 
   /* max-width: var(--grid-max-width); */
@@ -297,13 +300,13 @@ header>nav>menu:nth-of-type(1) {
   gap: 1rem;
 }
 
-header>nav>menu:nth-of-type(1)>button {
+/* header>nav>menu:nth-of-type(1)>button {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
   padding: 0;
-}
+} */
 
 
 header>nav>ul:nth-of-type(2)  {
@@ -383,6 +386,7 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
   transform: translateY(-3px) rotate(-45deg);
 }
 
+
 /**************/
 /* MOBIEL     */
 /**************/
@@ -397,16 +401,17 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
     left: 0;
     right: 0;
     top: 100%;
-    background: #fff;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--tertiary-background);
 
     flex-direction: column;
     align-items: flex-start;
     padding: 0.75rem 1.5rem 1rem;
   }
 
+
   header>nav[data-open="true"]>ul:nth-of-type(1) {
     display: flex;
+    background-color: var(--tertiary-background);
   }
 }
 
@@ -416,6 +421,7 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
 @media screen and (min-width: 64em) {
   header>nav>ul:nth-of-type(1) {
     display: flex;
+  
   } 
 
   /* hamburger = weg */
@@ -432,7 +438,7 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
     gap: 1.5rem;
   }
 
-  /* hover  */
+  /* hover middle links  state  */
   header>nav>ul:nth-of-type(1) li a {
     position: relative;
   }
@@ -444,13 +450,33 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
     bottom: -0.25rem;
     width: 0;
     height: 1px;
-    background: #000;
+    background: var(--primary-text);
     transition: width 0.2s ease;
   }
 
   header>nav>ul:nth-of-type(1) li a:hover::after {
     width: var(--max-width);
   }
+}
+
+/* main nav states */
+header a:focus-visible:not(.promo-bar) {
+   outline: 4px solid var(--focus-ring-color);
+   outline-offset: 5px;
+   & a:hover {
+  color: var(--primary-text);
+  text-decoration: none;
+  text-underline-position: below;
+   }
+}
+header a:active {
+background-color: pink; /* Tijdelijke placeholder */
+}
+
+
+.promo-bar:focus-visible {
+   outline: 0.2rem solid var(--focus-ring-color-img);
+   outline-offset: 0.3rem;
 }
 
 
@@ -668,19 +694,7 @@ footer > section:last-of-type > ul a:hover {
 /* Button states toevoegen, Active / hover / focus */
 
 /* Header states */
-header a:focus-visible:not(.promo-bar) {
-   outline: 4px solid var(--focus-ring-color);
-   outline-offset: 5px;
-}
-header a:active {
-background-color: pink; /* Tijdelijke placeholder */
-}
 
-
-.promo-bar:focus-visible {
-   outline: 4px solid var(--focus-ring-color-img);
-   outline-offset: 5px;
-}
 
 
 /* Main states */
@@ -690,6 +704,30 @@ main > a:focus-visible:not(img) {
 }
 
 
+
+/* Disable all animations */	
+/* https://www.inovex.de/de/blog/removing-animations-people-troubled-motion-css-angular/ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::after, *::before {
+    animation-duration: 1ms !important;      /* 1 */
+    animation-delay: -1ms !important;        /* 2 */
+    animation-iteration-count: 1 !important; /* 3 */
+    transition-duration: 1ms !important;     /* 4 */
+    transition-delay: -1ms !important;       /* 5 */
+  } 
+
+  /* Als animations disabled is = disable vid */
+  .hero > section:first-of-type video {
+display: none;
+
+  }
+  .hero > section:first-of-type {
+    background-image: url("../images/sonosBar.png");
+    background-size: cover;       /* covers the whole section */
+    background-position: center;  /* keeps image centered */
+    background-repeat: no-repeat; /* no tiling */
+  }
+}
 
 
 
