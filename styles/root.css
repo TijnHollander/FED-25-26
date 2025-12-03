@@ -17,10 +17,11 @@ body {
 
   /* light-dark color kleurtjes */
   --primary-background: light-dark(#ffffff, #000000);
-  --secondary-background: light-dark(#3b410b, #262a07);  
+  --secondary-background: light-dark(#3b410b, #262a07);
   --tertiary-background: light-dark(#ffffff, #1c1b22);
 
   --img-text: light-dark(#ffffff, #ffffff);
+  --img-background: light-dark(#ffffff, #17171b);
   --primary-text: light-dark(#000000, #ffffff);
   --secondary-text: light-dark(#000000, #e1e1e1);
   --tertiary-text: light-dark(#333333, #ffffff);
@@ -28,8 +29,9 @@ body {
 
   --primary-btn-border-color: light-dark(#000000, #ffffff);
 
-      --focus-ring-color: light-dark(#000000, #ffffff);
-    --focus-ring-color-img: light-dark(#ffffff, #ffffff);
+  --focus-ring-color: light-dark(#000000, #ffffff);
+  --secondary-focus-ring-color: light-dark(#ffffff, #ffffff);
+   --focus-ring-color-img: light-dark(#ffffff, #ffffff);
 
   /* algemeene zooi */
   --max-width: 100%;
@@ -187,7 +189,8 @@ body {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* voorkomt dat tekst meerdere regels wordt */
+  white-space: nowrap;
+  /* voorkomt dat tekst meerdere regels wordt */
   border: 0;
 }
 
@@ -201,6 +204,7 @@ body {
   overflow: hidden;
   z-index: 1000;
 }
+
 .skip-link:focus {
   position: static;
   left: auto;
@@ -309,14 +313,14 @@ header>nav>menu:nth-of-type(1) {
 } */
 
 
-header>nav>ul:nth-of-type(2)  {
+header>nav>ul:nth-of-type(2) {
   list-style: "";
   gap: var(--gap-large);
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  
-  
+
+
 }
 
 /* Links in menu */
@@ -357,7 +361,8 @@ header>nav>button:last-of-type {
   display: block;
   height: 2px;
   width: var(--max-width);
-  background: var(--main-color); /* Moet wit blijven */
+  background: var(--main-color);
+  /* Moet wit blijven */
 }
 
 #disable-close-btn span:first-of-type {
@@ -421,8 +426,8 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
 @media screen and (min-width: 64em) {
   header>nav>ul:nth-of-type(1) {
     display: flex;
-  
-  } 
+
+  }
 
   /* hamburger = weg */
   header>nav>button:last-of-type {
@@ -461,22 +466,25 @@ header>nav[data-open="true"]>button:last-of-type span:last-of-type {
 
 /* main nav states */
 header a:focus-visible:not(.promo-bar) {
-   outline: 4px solid var(--focus-ring-color);
-   outline-offset: 5px;
-   & a:hover {
-  color: var(--primary-text);
-  text-decoration: none;
-  text-underline-position: below;
-   }
+  outline: 4px solid var(--focus-ring-color);
+  outline-offset: 5px;
+
+  & a:hover {
+    color: var(--primary-text);
+    text-decoration: none;
+    text-underline-position: below;
+  }
 }
+
 header a:active {
-background-color: pink; /* Tijdelijke placeholder */
+  background-color: pink;
+  /* Tijdelijke placeholder */
 }
 
 
 .promo-bar:focus-visible {
-   outline: 0.2rem solid var(--focus-ring-color-img);
-   outline-offset: 0.3rem;
+  outline: 0.2rem solid var(--focus-ring-color-img);
+  outline-offset: 0.3rem;
 }
 
 
@@ -484,7 +492,7 @@ background-color: pink; /* Tijdelijke placeholder */
 /********************/
 /* MAIN GRID LAYOUT  */
 /********************/
-main > :not(.hero, .reverse-scroll-animation) {
+main> :not(.hero, .reverse-scroll-animation) {
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(1, 1fr);
@@ -502,10 +510,11 @@ main > :not(.hero, .reverse-scroll-animation) {
 /****************/
 /* SECTION template */
 /****************/
-main > section {
+main>section {
   color: var(--primary-text) !important;
   padding: 1em;
-} 
+}
+
 /* } & img {
   background-color: black;
 } */
@@ -522,30 +531,30 @@ footer {
 }
 
 /* footer max width geven zodat alles nice loopt */
-footer > section {
+footer>section {
   max-width: var(--grid-max-width);
   margin: 0 auto;
   padding: 2.5rem var(--grid-gutter);
 }
 
 /* nieuwsbrief */
-footer > section:first-of-type {
+footer>section:first-of-type {
   border-bottom: 1px solid #444;
 }
 
-footer > section:first-of-type h2 {
+footer>section:first-of-type h2 {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 0.75rem;
 }
 
-footer > section:first-of-type p {
+footer>section:first-of-type p {
   color: #ddd;
   max-width: 32rem;
 }
 
 /* form */
-footer > section:first-of-type form {
+footer>section:first-of-type form {
   margin: 1.5rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -553,7 +562,7 @@ footer > section:first-of-type form {
   align-items: center;
 }
 
-footer > section:first-of-type form input[type="email"] {
+footer>section:first-of-type form input[type="email"] {
   padding: 0.9rem 1rem;
   border-radius: 999px;
   border: none;
@@ -562,7 +571,7 @@ footer > section:first-of-type form input[type="email"] {
   color: #fff;
 }
 
-footer > section:first-of-type form button {
+footer>section:first-of-type form button {
   padding: 0.9rem 1.8rem;
   border-radius: 999px;
   border: none;
@@ -571,8 +580,9 @@ footer > section:first-of-type form button {
   color: #000;
   font-weight: 500;
 }
+
 /* Checkbox */
-footer > section:first-of-type > label {
+footer>section:first-of-type>label {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
@@ -580,19 +590,19 @@ footer > section:first-of-type > label {
   max-width: 34rem;
 }
 
-footer > section:first-of-type > label input[type="checkbox"] {
+footer>section:first-of-type>label input[type="checkbox"] {
   margin-top: 0.25rem;
 }
 
-footer > section:first-of-type > label a {
+footer>section:first-of-type>label a {
   color: #fff;
 }
 
-footer > section:nth-of-type(3) {
+footer>section:nth-of-type(3) {
   border-bottom: 1px solid #444;
 }
 
-footer > section:nth-of-type(2) > ul {
+footer>section:nth-of-type(2)>ul {
   list-style: "";
   margin: 0;
   padding: 0;
@@ -601,12 +611,12 @@ footer > section:nth-of-type(2) > ul {
 }
 
 /* !ELKE! kolom */
-footer > section:nth-of-type(2) > ul > li > h3 {
+footer>section:nth-of-type(2)>ul>li>h3 {
   font-size: 1rem;
   margin-bottom: 0.75rem;
 }
 
-footer > section:nth-of-type(2) > ul > li > ul {
+footer>section:nth-of-type(2)>ul>li>ul {
   list-style: "";
   margin: 0;
   padding: 0;
@@ -614,17 +624,17 @@ footer > section:nth-of-type(2) > ul > li > ul {
   gap: 0.25rem;
 }
 
-footer > section:nth-of-type(2) a {
+footer>section:nth-of-type(2) a {
   color: #ccc;
   text-decoration: none;
   font-size: 0.9rem;
 }
 
-footer > section:nth-of-type(2) a:hover {
+footer>section:nth-of-type(2) a:hover {
   text-decoration: underline;
 }
 
-footer > section:last-of-type {
+footer>section:last-of-type {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -632,11 +642,11 @@ footer > section:last-of-type {
   font-size: 0.8rem;
 }
 
-footer > section:last-of-type > p:first-of-type {
+footer>section:last-of-type>p:first-of-type {
   margin-right: auto;
 }
 
-footer > section:last-of-type > ul {
+footer>section:last-of-type>ul {
   list-style: "";
   margin: 0;
   padding: 0;
@@ -645,12 +655,12 @@ footer > section:last-of-type > ul {
   gap: 0.75rem 1.5rem;
 }
 
-footer > section:last-of-type > ul a {
+footer>section:last-of-type>ul a {
   color: #ccc;
   text-decoration: none;
 }
 
-footer > section:last-of-type > ul a:hover {
+footer>section:last-of-type>ul a:hover {
   text-decoration: underline;
 }
 
@@ -658,27 +668,28 @@ footer > section:last-of-type > ul a:hover {
 /* Footer responsive shizzle */
 /*********************/
 @media (min-width: 64em) {
+
   /* nieuwsbrief + input + checkbox === breder */
-  footer > section:first-of-type {
+  footer>section:first-of-type {
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     column-gap: 4rem;
     align-items: start;
   }
 
-  footer > section:first-of-type form {
+  footer>section:first-of-type form {
     flex-wrap: nowrap;
   }
 
   /* kolomen 5 grid */
-  footer > section:nth-of-type(2) > ul {
+  footer>section:nth-of-type(2)>ul {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
 
 @media (max-width: 48em) {
-  footer > section:nth-of-type(2) > ul > li {
+  footer>section:nth-of-type(2)>ul>li {
     border-bottom: 1px solid #333;
     padding-bottom: 1rem;
   }
@@ -698,34 +709,69 @@ footer > section:last-of-type > ul a:hover {
 
 
 /* Main states */
-main > a:focus-visible:not(img) {
+/* main > a:focus-visible:not(img) {
      outline: 4px solid var(--focus-ring-color);
      outline-offset: 5px;
+} */
+
+
+/* on:focus */
+main a:focus-visible {
+  outline: 0.2rem solid var(--focus-ring-color);
+  outline-offset: 0.3rem;
+}
+
+footer a:focus-visible {
+  outline: 0.15rem solid var(--secondary-focus-ring-color);
+  outline-offset: 0.15rem;
+}
+
+footer input:focus-visible {
+  outline: 0.25rem solid var(--secondary-focus-ring-color);
+  outline-offset: 0.35rem;
+}
+
+footer button:focus-visible {
+  outline: 0.25rem solid var(--secondary-focus-ring-color);
+  outline-offset: 0.35rem;
 }
 
 
 
-/* Disable all animations */	
+
+/* Disable all animations */
 /* https://www.inovex.de/de/blog/removing-animations-people-troubled-motion-css-angular/ */
 @media (prefers-reduced-motion: reduce) {
-  *, *::after, *::before {
-    animation-duration: 1ms !important;      /* 1 */
-    animation-delay: -1ms !important;        /* 2 */
-    animation-iteration-count: 1 !important; /* 3 */
-    transition-duration: 1ms !important;     /* 4 */
-    transition-delay: -1ms !important;       /* 5 */
-  } 
+
+  *,
+  *::after,
+  *::before {
+    animation-duration: 1ms !important;
+    /* 1 */
+    animation-delay: -1ms !important;
+    /* 2 */
+    animation-iteration-count: 1 !important;
+    /* 3 */
+    transition-duration: 1ms !important;
+    /* 4 */
+    transition-delay: -1ms !important;
+    /* 5 */
+  }
 
   /* Als animations disabled is = disable vid */
-  .hero > section:first-of-type video {
-display: none;
+  .hero>section:first-of-type video {
+    display: none;
 
   }
-  .hero > section:first-of-type {
+
+  .hero>section:first-of-type {
     background-image: url("../images/sonosBar.png");
-    background-size: cover;       /* covers the whole section */
-    background-position: center;  /* keeps image centered */
-    background-repeat: no-repeat; /* no tiling */
+    background-size: cover;
+    /* covers the whole section */
+    background-position: center;
+    /* keeps image centered */
+    background-repeat: no-repeat;
+    /* no tiling */
   }
 }
 
@@ -737,4 +783,5 @@ display: none;
 main img {
   max-width: var(--max-width);
   height: auto;
+  background-color: var(--img-background);
 }

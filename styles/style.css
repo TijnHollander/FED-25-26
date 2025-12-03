@@ -91,6 +91,7 @@ main > section:first-of-type img {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  background-color: var(--img-background);
 }
 
 main > section:first-of-type::after {
@@ -293,6 +294,7 @@ main section:nth-of-type(3) img {
   max-width: var(--max-width);
   height: auto;
   object-fit: contain;
+  
 }
 
 @media screen and (min-width: 54em) {
