@@ -91,7 +91,7 @@ main > section:first-of-type img {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  background-color: var(--img-background);
+  
 }
 
 main > section:first-of-type::after {
