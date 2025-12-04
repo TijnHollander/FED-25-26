@@ -5,13 +5,13 @@
 
 .hero > section:first-of-type {
   position: relative;
-  height: var(--hero-height, 100vh);
+  height: var(--hero-height);
   width: var(--max-width);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: var(--hero-bottom-margin, 5%);
+  margin-bottom: var(--hero-bottom-margin);
 }
 
 .hero > section:first-of-type::after {
@@ -35,14 +35,14 @@
   text-align: center;
   color: var(--img-text);
   z-index: 2;
-  padding: 0 var(--hero-content-padding-inline, 1rem);
+  padding: 0 var(--hero-content-padding-inline);
 }
 
 .hero-content > h2 {
   font-size: var(--hero-title-size);
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: var(--hero-heading-margin-bottom, 1.2rem);
+  margin-bottom: var(--hero-heading-margin-bottom);
 }
 
 /* Hero button */
@@ -106,7 +106,7 @@ main > section:first-of-type * {
   position: relative;
   z-index: 3;
   color: var(--main-color);
-  margin: var(--feature-inner-gap, 0.5em) 0;
+  margin: var(--feature-inner-gap);
   font-size: var(--feature-title-size);
   font-weight: 400;
 }
